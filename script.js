@@ -11,6 +11,8 @@
 // Variables
 var complexity, values, i, copyPassword, passwordDOM;
 
+var password = "";
+
 // Request for desired password length
 var complexity = prompt('What is your desired password length? Enter a number between 8-26');
 console.log(complexity);
@@ -20,8 +22,8 @@ var values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%
 
 // Function to be called on click
 document.querySelector('.btn-generate').addEventListener('click', function() {
-    for(var i = 0; i <= complexity; i++){
-    var password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+    for(var i = 1; i <= complexity; i++){
+    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
     var passwordDOM = document.querySelector('.generated-password');
     passwordDOM.textContent = password;
@@ -31,8 +33,8 @@ document.querySelector('.btn-generate').addEventListener('click', function() {
 
 // Function to code copy to clipboard button
 document.querySelector('.btn-clipboard').addEventListener('click', function(){
-    var copyPassword = document.getElementById('.generated-password');
-    document.execCommand("Copy");
+    copyPassword = document.querySelector('.generated-password').innerHTML;
+    document.execCommand("copy");
     alert("Password copied!");
     });
-   
+
