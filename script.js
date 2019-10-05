@@ -15,7 +15,7 @@ var password = "";
 
 // Request for desired password length
 var complexity = prompt('What is your desired password length? Enter a number between 8-26');
-console.log(complexity);
+// console.log(complexity);
 
 // String to pull from using charAt and Math.random
 var values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*?';
@@ -33,8 +33,14 @@ document.querySelector('.btn-generate').addEventListener('click', function() {
 
 // Function to code copy to clipboard button
 document.querySelector('.btn-clipboard').addEventListener('click', function(){
-    copyPassword = document.querySelector('.generated-password').innerHTML;
+    copyPassword = document.getElementById('generated-password');
     document.execCommand("copy");
     alert("Password copied!");
     });
 
+/***
+ * Current errors:
+ * generate password does not replace password if button is clicked, it keeps adding on to the first one --> loop issue?
+ * would like to build in something that prevents a user from entering a number outside of the specified parameters for complexity
+ * copy to clipboard function still not functioning
+ */

@@ -63,6 +63,8 @@ textarea {
     resize: none;
 }
 
+.generated-password:focus {outline: none; }
+
 .button-box {
     margin-top: 20px;
     border-top: 2px #cccccc solid;
