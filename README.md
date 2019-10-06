@@ -24,3 +24,6 @@ Uppercase characters
 The application should validate user input and ensure that at least one character type is selected.
 
 The user will also have the option to click a button to copy the password to their clipboard.
+
+## Notes
+This application is still in progress of debugging to be functional.
