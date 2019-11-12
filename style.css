@@ -51,9 +51,20 @@ h2 {
     margin: 10px;
 }
 
+.password-box-sm h3 {
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px;
+}
+
+#password-box-text {
+    padding: 10px;
+}
+
 textarea {
-    width: 100%;
-    margin: 0 auto;
+    width: 35%;
+    height: 25%;
+    margin: 10px auto;
     padding: 10px;
     font-size: 18px;
     text-align: center;
@@ -61,6 +72,7 @@ textarea {
     border: 2px dashed #cccccc;
     border-radius: 4px;
     resize: none;
+    display: block;
 }
 
 .generated-password:focus {outline: none; }
@@ -89,4 +101,28 @@ button {
 .btn-clipboard {
     background-color: lightgray;
     float: left;
+}
+
+.btn {
+    display: block;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+label {
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
+}
+
+#radioYes {
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
+}
+
+#radioNo {
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
 }
